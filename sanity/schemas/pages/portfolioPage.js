@@ -7,8 +7,8 @@ const portfolioPage = {
       name: 'heroImage',
       title: 'Hero Image',
       type: 'image',
-      accept: '.png,.jpg,.jpeg',
       description: 'Select a hero image to display at the top of the page',
+      accept: '.png,.jpg,.jpeg',
       options: {
         hotspot: true,
       },
@@ -30,16 +30,16 @@ const portfolioPage = {
       ],
     },
     {
-      name: 'mainHeadline',
-      title: 'Main Headline',
+      name: 'projectsHeadline',
+      title: 'Featured Projects Section Headline',
       type: 'string',
-      description: 'What should the headline under the hero image say?',
+      description: 'What should the headline above the featured projects say?',
       validation: (rule) =>
         rule.required().warning('🤖 You must include a main headline'),
     },
     {
-      name: 'mainText',
-      title: 'Main Text Block',
+      name: 'projectsText',
+      title: 'Featured Projects Section Text',
       type: 'text',
       description:
         'Introduce the portfolio with an outline of the services you provide, the type of clients you serve, and or other information you\'d like users to have as they browser your project gallery',

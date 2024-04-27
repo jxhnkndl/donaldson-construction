@@ -7,8 +7,8 @@ const contactPage = {
       name: 'heroImage',
       title: 'Hero Image',
       type: 'image',
-      accept: '.png,.jpg,.jpeg',
       description: 'Select a hero image to display at the top of the page',
+      accept: '.png,.jpg,.jpeg',
       options: {
         hotspot: true,
       },
@@ -28,19 +28,19 @@ const contactPage = {
       ],
     },
     {
-      name: 'mainHeadline',
-      title: 'Main Headline',
+      name: 'contactHeadline',
+      title: 'Contact Section Headline',
       type: 'string',
-      description: 'What should the headline under the hero image say?',
+      description: 'What should the headline above the contact form say?',
       validation: (rule) =>
         rule.required().warning('🤖 You must include a main headline'),
     },
     {
-      name: 'mainText',
-      title: 'Main Text Block',
+      name: 'contactText',
+      title: 'Contact Section Text',
       type: 'text',
       description:
-        'Provide 2-3 sentences inviting users to contact you using the contact form',
+        'Provide 2-3 sentences inviting users to contact the company using the contact form',
       validation: (rule) =>
         rule
           .required()
@@ -60,10 +60,10 @@ const contactPage = {
       ],
     },
     {
-      name: 'formButtonText',
+      name: 'formCta',
       title: 'Form Submit Button Text',
       type: 'string',
-      description: 'This is the text on the button that submits the contact form',
+      description: 'This is the text on the button that submits the contact form (Default: Submit)',
       initialValue: 'Submit'
     }
   ],

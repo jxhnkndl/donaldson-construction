@@ -1,54 +1,70 @@
 const homePage = {
-  type: 'document',
   name: 'homePage',
   title: 'Home Page',
+  type: 'document',
   groups: [
-    { name: 'heroImages', title: 'Hero Images' },
-    { name: 'overview', title: 'Overview' },
-    { name: 'brandRowTop', title: 'Brand Statement - Top' },
+    { name: 'hero', title: 'Hero Images' },
+    { name: 'about', title: 'About Section' },
+    { name: 'brandTop', title: 'Brand Statement - Top' },
     { name: 'projects', title: 'Featured Projects' },
-    { name: 'brandRowBottom', title: 'Brand Statement - Bottom' },
+    { name: 'brandBottom', title: 'Brand Statement - Bottom' },
     { name: 'testimonials', title: 'Testimonials' },
-    { name: 'brandStatements', title: 'Brand Statements' },
   ],
   fields: [
-    // OVERVIEW
+    // HERO IMAGES
     {
-      name: 'mainHeadline',
-      title: 'Main Headline',
-      type: 'string',
-      description: 'What should the headline under the hero image slider say?',
-      group: 'overview',
+      name: 'heroImages',
+      title: 'Hero Images',
+      type: 'array',
+      group: 'hero',
+      description: 'Select images to display in the hero image carousel',
+      of: [{ type: 'projectImage' }],
       validation: (rule) =>
-        rule.required().warning('🤖 You must include a main headline'),
+        rule
+          .required()
+          .warning('🤖 You must include at least one project image'),
+    },
+
+    // ABOUT
+    {
+      name: 'aboutHeadline',
+      title: 'About Section Headline',
+      type: 'string',
+      group: 'about',
+      description: 'What should the headline above the company overview say?',
+      validation: (rule) =>
+        rule
+          .required()
+          .warning('🤖 You must include a headline for the about section'),
     },
     {
-      name: 'mainText',
-      title: 'Main Text Block - Mission Statement',
+      name: 'aboutText',
+      title: 'About Section Text',
       type: 'text',
+      group: 'about',
       description:
-        'Write a short mission statement or brand overview that introduces users to the company',
-      group: 'overview',
+        'Provide a one paragraph mission statement that introduces users to the company',
       validation: (rule) =>
         rule.required().warning('🤖 You must include a mission statement'),
     },
     {
-      name: 'overviewCta',
-      title: 'CTA Button Text',
+      name: 'aboutCta',
+      title: 'About Section Button Text',
       type: 'string',
-      description: 'This is the text on the button under the mission statement redirecting users to the about page',
-      group: 'overview',
+      group: 'about',
+      description:
+        'What should the text inside the call to action button at the bottom of the about section that links to the about page say? (Default: About Us)',
       initialValue: 'About Us',
     },
 
     // BRAND ROW - TOP
     {
-      name: 'brandStatementTop',
-      title: 'Brand Statement - Top Row',
+      name: 'brandTopHeadline',
+      title: 'Brand Headline',
       type: 'string',
+      group: 'brandTop',
       description:
         'Write a short brand headline to appear over the orange brand block',
-      group: 'brandRowTop',
       validation: (rule) => [
         rule.required().warning('🤖 You must include a brand statement'),
         rule
@@ -57,13 +73,13 @@ const homePage = {
       ],
     },
     {
-      name: 'brandImageTop',
-      title: 'Brand Image - Top Row',
+      name: 'brandTopImage',
+      title: 'Brand Image',
       type: 'image',
-      accept: '.png,.jpg,.jpeg',
+      group: 'brandTop',
       description:
         'Select a brand image to display next to the orange brand block',
-      group: 'brandRowTop',
+      accept: '.png,.jpg,.jpeg',
       options: {
         hotspot: true,
       },
@@ -71,8 +87,8 @@ const homePage = {
         rule.required().warning('🤖 You must include a brand image'),
       fields: [
         {
-          name: 'brandImageTopAltText',
-          title: 'Brand Image Alt Text - Top Row',
+          name: 'brandTopImageAltText',
+          title: 'Brand Image - Alt Text',
           type: 'string',
           description: "Describe what's happening in the image in one sentence",
           validation: (rule) =>
@@ -85,11 +101,12 @@ const homePage = {
 
     // FEATURED PROJECTS
     {
-      name: 'projectHeadline',
+      name: 'projectsHeadline',
       title: 'Featured Projects Headline',
       type: 'string',
-      description: 'What should the headline above the featured projects section say?',
       group: 'projects',
+      description:
+        'What should the headline above the featured projects section say?',
       validation: (rule) =>
         rule
           .required()
@@ -97,21 +114,22 @@ const homePage = {
     },
     {
       name: 'projectsCta',
-      title: 'Featured Projects CTA Button Text',
+      title: 'Featured Projects Section Button Text',
       type: 'string',
-      description: 'This is the text on the button under the featured projects redirecting users to the portfolio page',
+      description:
+        'What should the text inside the call to action button at the bottom of the featured projects section that links to the portfolio page say? (Default: View More)',
       group: 'projects',
       initialValue: 'View More',
     },
 
     // BRAND ROW - BOTTOM
     {
-      name: 'brandStatementBottom',
-      title: 'Brand Statement - Bottom Row',
+      name: 'brandBottomHeadline',
+      title: 'Brand Headline',
       type: 'string',
+      group: 'brandBottom',
       description:
         'Write a short brand headline to appear over the yellow brand block',
-      group: 'brandRowBottom',
       validation: (rule) => [
         rule.required().warning('🤖 You must include a brand statement'),
         rule
@@ -120,13 +138,13 @@ const homePage = {
       ],
     },
     {
-      name: 'brandImageBottom',
-      title: 'Brand Image - Bottom Row',
+      name: 'brandBottomImage',
+      title: 'Brand Image',
       type: 'image',
-      accept: '.png,.jpg,.jpeg',
+      group: 'brandBottom',
       description:
         'Select a brand image to display next to the yellow brand block',
-      group: 'brandRowBottom',
+      accept: '.png,.jpg,.jpeg',
       options: {
         hotspot: true,
       },
@@ -134,8 +152,8 @@ const homePage = {
         rule.required().warning('🤖 You must include another brand image'),
       fields: [
         {
-          name: 'brandImageBottomAltText',
-          title: 'Brand Image Alt Text - Bottom Row',
+          name: 'brandBottomImageAltText',
+          title: 'Brand Image - Alt Text',
           type: 'string',
           description: "Describe what's happening in the image in one sentence",
           validation: (rule) =>
@@ -149,9 +167,10 @@ const homePage = {
     // TESTIMONIALS
     {
       name: 'testimonialsHeadline',
-      title: 'Testimonials Headline',
+      title: 'Testimonials Section Headline',
       type: 'string',
-      description: 'What should the headline above the testimonials slider say?',
+      description:
+        'What should the headline above the testimonials slider say?',
       group: 'testimonials',
     },
   ],
