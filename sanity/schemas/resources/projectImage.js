@@ -1,11 +1,11 @@
-const galleryImages = {
+const projectImage = {
   type: 'document',
-  name: 'galleryImage',
-  title: 'Gallery Image',
+  name: 'projectImage',
+  title: 'Project Image',
   fields: [
     {
-      name: 'image',
-      title: 'Image',
+      name: 'projectImage',
+      title: 'Project Image',
       type: 'image',
       accept: '.png,.jpg,.jpeg',
       description: 'Select project image',
@@ -17,17 +17,17 @@ const galleryImages = {
       fields: [
         {
           name: 'imageAltText',
-          title: 'Gallery Image - Alt Text',
+          title: 'Image - Alt Text',
           type: 'string',
           description: "Describe what's happening in the image in one sentence",
           validation: (rule) =>
             rule
               .required()
-              .warning('🤖 You must include alt text for the gallery image'),
+              .warning('🤖 You must include alt text for the image'),
         },
       ],
     },
   ],
 };
 
-export default galleryImages;
+export default projectImage;

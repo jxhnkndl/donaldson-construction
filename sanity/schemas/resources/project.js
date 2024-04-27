@@ -69,7 +69,7 @@ const project = {
       title: 'Image Gallery',
       type: 'array',
       description: "Select images to display in the project's image gallery",
-      of: [{ type: 'galleryImage' }],
+      of: [{ type: 'projectImage' }],
       validation: (rule) =>
         rule
           .required()
