@@ -22,8 +22,8 @@ const homePage = {
         rule.required().warning('🤖 You must include a main headline'),
     },
     {
-      name: 'missionStatement',
-      title: 'Mission Statement',
+      name: 'mainText',
+      title: 'Main Text Block - Mission Statement',
       type: 'text',
       group: 'overview',
       validation: (rule) =>
