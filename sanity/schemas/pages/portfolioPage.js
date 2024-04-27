@@ -35,7 +35,7 @@ const portfolioPage = {
       type: 'string',
       description: 'What should the headline above the featured projects say?',
       validation: (rule) =>
-        rule.required().warning('🤖 You must include a main headline'),
+        rule.required().warning('🤖 You must include a headline for the projects section'),
     },
     {
       name: 'projectsText',
@@ -44,7 +44,7 @@ const portfolioPage = {
       description:
         'Introduce the portfolio with an outline of the services you provide, the type of clients you serve, and or other information you\'d like users to have as they browser your project gallery',
       validation: (rule) =>
-        rule.required().warning('🤖 You must include a portfolio overview'),
+        rule.required().warning('🤖 You must include text for the projects section'),
     },
   ],
 };

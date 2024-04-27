@@ -33,7 +33,7 @@ const contactPage = {
       type: 'string',
       description: 'What should the headline above the contact form say?',
       validation: (rule) =>
-        rule.required().warning('🤖 You must include a main headline'),
+        rule.required().warning('🤖 You must include a headline for the contact section'),
     },
     {
       name: 'contactText',
@@ -44,7 +44,7 @@ const contactPage = {
       validation: (rule) =>
         rule
           .required()
-          .warning('🤖 You must include a contact section overview'),
+          .warning('🤖 You must include text for the contact section'),
     },
     {
       name: 'serviceAreas',

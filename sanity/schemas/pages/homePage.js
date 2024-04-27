@@ -45,7 +45,9 @@ const homePage = {
       description:
         'Provide a one paragraph mission statement that introduces users to the company',
       validation: (rule) =>
-        rule.required().warning('🤖 You must include a mission statement'),
+        rule
+          .required()
+          .warning('🤖 You must include text for the about section'),
     },
     {
       name: 'aboutCta',
@@ -110,15 +112,17 @@ const homePage = {
       validation: (rule) =>
         rule
           .required()
-          .warning('🤖 You must include a featured projects headline'),
+          .warning(
+            '🤖 You must include a headline for the featured projects section'
+          ),
     },
     {
       name: 'projectsCta',
       title: 'Featured Projects Section Button Text',
       type: 'string',
+      group: 'projects',
       description:
         'What should the text inside the call to action button at the bottom of the featured projects section that links to the portfolio page say? (Default: View More)',
-      group: 'projects',
       initialValue: 'View More',
     },
 
@@ -169,9 +173,13 @@ const homePage = {
       name: 'testimonialsHeadline',
       title: 'Testimonials Section Headline',
       type: 'string',
+      group: 'testimonials',
       description:
         'What should the headline above the testimonials slider say?',
-      group: 'testimonials',
+      validation: (rule) =>
+        rule
+          .required()
+          .warning('🤖 You must include a headline for the testimonials section'),
     },
   ],
 };
