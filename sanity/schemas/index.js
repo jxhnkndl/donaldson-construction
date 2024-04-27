@@ -1,4 +1,5 @@
 import homePage from './pages/homePage';
+import portfolioPage from './pages/portfolioPage';
 
 import help from './components/help';
 
@@ -7,5 +8,5 @@ import project from './resources/project';
 import testimonial from './resources/testimonial';
 
 export const schema = {
-  types: [galleryImages, help, homePage, project, testimonial],
+  types: [galleryImages, help, homePage, portfolioPage, project, testimonial],
 };
