@@ -89,7 +89,6 @@ const project = {
       description: 'Flip this switch to feature this project on the homepage',
       initialValue: false,
     },
-
     {
       name: 'hidden',
       title: 'Hidden',

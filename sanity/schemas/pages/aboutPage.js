@@ -9,7 +9,7 @@ const aboutPage = {
     { name: 'testimonials', title: 'Testimonials' },
   ],
   fields: [
-    // HERO
+    // HERO SECTION
     {
       name: 'heroImage',
       title: 'Hero Image',
@@ -35,7 +35,6 @@ const aboutPage = {
         },
       ],
     },
-
     // ABOUT SECTION
     {
       name: 'aboutHeadline',
@@ -91,8 +90,7 @@ const aboutPage = {
         'What should the text inside the call to action button at the bottom of the about section that links to the careers page say? (Default: Join Our Team)',
       initialValue: 'View More',
     },
-
-    // BRAND ROW
+    // BRAND STATEMENT BLOCK
     {
       name: 'brandHeadline',
       title: 'Brand Headline',
@@ -133,8 +131,7 @@ const aboutPage = {
         },
       ],
     },
-
-    // TESTIMONIALS
+    // TESTIMONIALS SECTION
     {
       name: 'testimonialsHeadline',
       title: 'Testimonials Section Headline',

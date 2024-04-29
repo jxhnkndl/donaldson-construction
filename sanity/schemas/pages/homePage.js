@@ -11,7 +11,7 @@ const homePage = {
     { name: 'testimonials', title: 'Testimonials' },
   ],
   fields: [
-    // HERO IMAGES
+    // HERO SECTION
     {
       name: 'heroImages',
       title: 'Hero Images',
@@ -24,8 +24,7 @@ const homePage = {
           .required()
           .warning('🤖 You must include at least one project image'),
     },
-
-    // ABOUT
+    // ABOUT SECTION
     {
       name: 'aboutHeadline',
       title: 'About Section Headline',
@@ -58,8 +57,7 @@ const homePage = {
         'What should the text inside the call to action button at the bottom of the about section that links to the about page say? (Default: About Us)',
       initialValue: 'About Us',
     },
-
-    // BRAND ROW - TOP
+    // BRAND STATEMENT BLOCK (TOP)
     {
       name: 'brandTopHeadline',
       title: 'Brand Headline',
@@ -100,8 +98,7 @@ const homePage = {
         },
       ],
     },
-
-    // FEATURED PROJECTS
+    // FEATURED PROJECTS SECTION
     {
       name: 'projectsHeadline',
       title: 'Featured Projects Headline',
@@ -125,8 +122,7 @@ const homePage = {
         'What should the text inside the call to action button at the bottom of the featured projects section that links to the portfolio page say? (Default: View More)',
       initialValue: 'View More',
     },
-
-    // BRAND ROW - BOTTOM
+    // BRAND STATEMENT BLOCK - BOTTOM
     {
       name: 'brandBottomHeadline',
       title: 'Brand Headline',
@@ -167,8 +163,7 @@ const homePage = {
         },
       ],
     },
-
-    // TESTIMONIALS
+    // TESTIMONIALS SECTION
     {
       name: 'testimonialsHeadline',
       title: 'Testimonials Section Headline',
