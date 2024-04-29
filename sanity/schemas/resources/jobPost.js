@@ -1,7 +1,10 @@
+import { IoDocumentSharp } from "react-icons/io5";
+
 const jobPost = {
   type: 'document',
   name: 'jobPost',
   title: 'Job Post',
+  icon: IoDocumentSharp,
   fields: [
     {
       name: 'title',

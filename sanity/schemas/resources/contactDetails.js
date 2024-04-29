@@ -1,7 +1,10 @@
+import { BsTelephoneFill } from "react-icons/bs";
+
 const contactDetails = {
   type: 'document',
   name: 'contactDetails',
   title: 'Contact Details',
+  icon: BsTelephoneFill,
   fields: [
     {
       name: 'phoneRichmond',

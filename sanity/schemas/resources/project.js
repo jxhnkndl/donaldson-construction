@@ -1,7 +1,10 @@
+import { GrProjects } from "react-icons/gr";
+
 const project = {
   type: 'document',
   name: 'project',
   title: 'Project',
+  icon: GrProjects,
   fields: [
     {
       name: 'title',

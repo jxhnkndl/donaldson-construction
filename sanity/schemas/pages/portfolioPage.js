@@ -1,7 +1,10 @@
+import { LuGalleryVerticalEnd } from "react-icons/lu";
+
 const portfolioPage = {
   type: 'document',
   name: 'portfolioPage',
   title: 'Portfolio Page',
+  icon: LuGalleryVerticalEnd,
   groups: [
     { name: 'hero', title: 'Hero Section' },
     { name: 'projects', title: 'Project Gallery Section' },

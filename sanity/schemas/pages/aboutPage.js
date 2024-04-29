@@ -1,7 +1,10 @@
+import { AiFillInfoCircle } from "react-icons/ai";
+
 const aboutPage = {
   type: 'document',
   name: 'aboutPage',
   title: 'About Page',
+  icon: AiFillInfoCircle,
   groups: [
     { name: 'hero', title: 'Hero Section' },
     { name: 'about', title: 'About Section' },

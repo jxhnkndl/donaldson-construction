@@ -1,7 +1,10 @@
+import { FaStar } from "react-icons/fa";
+
 const testimonial = {
   type: 'document',
   name: 'testimonial',
   title: 'Testimonial',
+  icon: FaStar,
   fields: [
     {
       name: 'name',

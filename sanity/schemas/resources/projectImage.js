@@ -1,7 +1,10 @@
+import { IoImagesSharp } from "react-icons/io5";
+
 const projectImage = {
   type: 'document',
   name: 'projectImage',
   title: 'Project Image',
+  icon: IoImagesSharp,
   fields: [
     {
       name: 'projectImage',

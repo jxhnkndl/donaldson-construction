@@ -1,7 +1,10 @@
+import { FaHome } from "react-icons/fa";
+
 const homePage = {
   name: 'homePage',
   title: 'Home Page',
   type: 'document',
+  icon: FaHome,
   groups: [
     { name: 'hero', title: 'Hero Images' },
     { name: 'about', title: 'About Section' },

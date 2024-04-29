@@ -1,7 +1,10 @@
+import { IoMdContact } from "react-icons/io";
+
 const contactPage = {
   type: 'document',
   name: 'contactPage',
   title: 'Contact Page',
+  icon: IoMdContact,
   groups: [
     { name: 'hero', title: 'Hero Section' },
     { name: 'contact', title: 'Contact Form Section' },

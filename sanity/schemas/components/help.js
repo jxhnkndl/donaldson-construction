@@ -1,7 +1,10 @@
+import { IoIosHelpCircle } from "react-icons/io";
+
 const helpComponent = {
   type: 'document',
   name: 'helpBlock',
   title: 'Help Block',
+  icon: IoIosHelpCircle,
   fields: [
     {
       name: 'helpHeadline',

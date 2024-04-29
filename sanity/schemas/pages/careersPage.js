@@ -1,7 +1,10 @@
+import { MdBusinessCenter } from "react-icons/md";
+
 const careersPage = {
   type: 'document',
   name: 'careersPage',
   title: 'Careers Page',
+  icon: MdBusinessCenter,
   groups: [
     { name: 'hero', title: 'Hero Section' },
     { name: 'careers', title: 'Careers Section' },
