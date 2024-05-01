@@ -1,0 +1,40 @@
+.section {
+  --padding-top-section-lg: 6.5rem;
+  --padding-bottom-section-lg: 6.5rem;
+
+  --padding-top-section-md: 5rem;
+  --padding-bottom-section-md: 5rem;
+
+  --padding-top-section-sm: 3.5rem;
+  --padding-bottom-section-sm: 3.5rem;
+
+  --padding-side-lg: 2rem;
+  --padding-side-sm: 1.5rem;
+
+  padding-top: var(--padding-top-section-lg);
+  padding-bottom: var(--padding-bottom-section-lg);
+}
+
+.sidePadding {
+  padding-left: var(--padding-side-lg);
+  padding-right: var(--padding-side-lg);
+}
+
+@media screen and (max-width: 991px) {
+  .section {
+    padding-top: var(--padding-top-section-md);
+    padding-bottom: var(--padding-bottom-section-md);
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .section {
+    padding-top: var(--padding-top-section-sm);
+    padding-bottom: var(--padding-bottom-section-sm);
+  }
+
+  .sidePadding {
+    padding-left: var(--padding-side-sm);
+    padding-right: var(--padding-side-sm);
+  }
+}
