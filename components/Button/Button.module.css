@@ -46,5 +46,7 @@
 @media screen and (max-width: 479px) {
   .button {
     display: flex;
+    padding-left: 0;
+    padding-right: 0;
   }
 }
