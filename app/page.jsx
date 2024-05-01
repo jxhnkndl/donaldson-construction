@@ -1,15 +1,18 @@
 import { fetchHomePage } from '@/sanity/utils/homePageActions';
+import { fetchFeatured } from '@/sanity/utils/projectActions';
 
 import BrandStatement from '@/components/BrandStatement/BrandStatement';
 import Button from '@/components/Button/Button';
 import Carousel from '@/components/Carousel/Carousel';
 import Container from '@/components/Container/Container';
+import ProjectGrid from '@/components/ProjectGrid/ProjectGrid';
 import { IoChevronForward } from 'react-icons/io5';
 import Section from '@/components/Section/Section';
 
 const HomePage = async () => {
-  const data = await fetchHomePage();
-
+  const pageData = await fetchHomePage();
+  const projectData = await fetchFeatured();
+  
   const {
     aboutCta,
     aboutHeadline,
@@ -22,7 +25,7 @@ const HomePage = async () => {
     projectsCta,
     projectsHeadline,
     testimonialsHeadline,
-  } = data[0];
+  } = pageData[0];
 
   return (
     <main>
@@ -54,6 +57,7 @@ const HomePage = async () => {
       <Section fluid={false}>
         <Container>
           <h2 className='heading'>{projectsHeadline}</h2>
+          <ProjectGrid projects={projectData} />
           <Button type='dark' href='/about'>
             {projectsCta}
             <IoChevronForward className='chevron' />

@@ -1,7 +1,7 @@
 import { createClient, groq } from 'next-sanity';
 import { apiVersion, dataset, projectId } from '../env';
 
-export async function fetchProjects() {
+export async function fetchFeatured() {
   const client = createClient({
     projectId,
     dataset,
@@ -10,6 +10,7 @@ export async function fetchProjects() {
 
   return client.fetch(
     groq`*[_type == 'project' && featured == true]{
+      _id,
       title,
       location,
       shortDescription,
