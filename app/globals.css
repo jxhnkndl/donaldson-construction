@@ -103,6 +103,7 @@ body {
   }
 
   .bodyText {
+    max-width: 100%;
     letter-spacing: var(--font-letter-spacing-sm);
   }
 }
