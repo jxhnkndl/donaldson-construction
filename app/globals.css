@@ -7,6 +7,10 @@
 */
 
 :root {
+  --brand-block-height-lg: 70vh;
+  --brand-block-height-md: 40vh;
+  --brand-block-height-sm: 40vh;
+
   --button-x-padding: 4.5rem;
   --button-y-padding: 1rem;
   --button-border-radius: 80px;
@@ -90,9 +94,6 @@ section {
   font-weight: 500;
 }
 
-.brandStatement {
-  font-size: var(--font-size-brand-statement-lg);
-}
 
 .title {
   font-size: var(--font-size-small-title);
@@ -118,20 +119,12 @@ section {
   .heading {
     font-size: var(--font-size-heading-md);
   }
-
-  .brandStatement {
-    font-size: var(--font-size-brand-statement-md);
-  }
 }
 
 @media screen and (max-width: 767px) {
   .heading {
     margin-bottom: var(--heading-bottom-margin-sm);
     font-size: var(--font-size-heading-sm);
-  }
-
-  .brandStatement {
-    font-size: var(--font-size-brand-statement-sm);
   }
 
   .bodyText {

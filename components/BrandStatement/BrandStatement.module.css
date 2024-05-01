@@ -1,0 +1,77 @@
+.grid {
+  position: relative;
+  display: grid;
+  /* Two columns of equal width; 1fr means equal fractional units */
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0;
+}
+
+.textBlock {
+  min-height: 60vh;
+  position: relative;
+  background-image: url('../../assets/blueprint-bg.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: none;
+}
+
+.textContainer {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.primary {
+  background-color: rgba(242, 135, 6, 0.88);
+}
+
+.secondary {
+  background-color: rgba(242, 183, 3, 0.88);
+}
+
+.image {
+  min-height: 60vh;
+}
+
+.heading {
+  width: 60%;
+  font-size: var(--font-size-brand-statement-lg);
+  font-weight: 600;
+  line-height: 3.75rem;
+}
+
+@media screen and (max-width: 991px) {
+  .textBlock {
+    min-height: 50vh;
+  }
+
+  .imageBlock {
+    min-height: 50vh;
+  }
+
+  .heading {
+    max-width: 75%;
+    font-size: var(--font-size-brand-statement-md);
+    line-height: 3.25rem;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .grid {
+    /* Single column rwo; 1fr = entire width of container */
+    grid-template-columns: 1fr;
+  }
+
+  .heading {
+    font-size: var(--font-size-brand-statement-sm);
+    line-height: 2.75rem;
+  }
+}
+
+@media screen and (max-width: 479px) {
+  .heading {
+    max-width: 100%;
+  }
+}

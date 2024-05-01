@@ -1,5 +1,6 @@
 import { fetchHomePage } from '@/sanity/utils/homePageActions';
 
+import BrandStatement from '@/components/BrandStatement/BrandStatement';
 import Button from '@/components/Button/Button';
 import Carousel from '@/components/Carousel/Carousel';
 import Container from '@/components/Container/Container';
@@ -40,6 +41,13 @@ const HomePage = async () => {
       </Section>
 
       {/* BRAND STATEMENT */}
+      <BrandStatement
+        color='primary'
+        heading={brandTopHeadline}
+        image={brandTopImage}
+        textOrder={1}
+        imageOrder={2}
+      />
     </main>
   );
 };
