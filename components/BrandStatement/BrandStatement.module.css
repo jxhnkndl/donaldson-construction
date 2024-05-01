@@ -1,6 +1,6 @@
 .grid {
   --block-min-height-lg: 60vh;
-  --block-min-height-md: 50vh;
+  --block-min-height-md: 75vh;
   --block-min-height-sm: 50vh;
 
   --font-size-brand-statement-lg: 3.25rem;
@@ -52,16 +52,16 @@
 
 @media screen and (max-width: 991px) {
   .textBlock {
-    min-height: var(--block-min-height-md);
+    min-height: var(--block-min-height-lg);
   }
 
   .imageBlock {
-    min-height: var(--block-min-height-md);
+    min-height: var(--block-min-height-lg);
   }
 
   .heading {
     max-width: 75%;
-    font-size: var(--font-size-brand-statement-md);
+    font-size: var(--font-size-brand-statement-lg);
     line-height: 3.25rem;
   }
 }
@@ -73,6 +73,21 @@
   }
 
   .textBlock {
+    min-height: var(--block-min-height-md);
+  }
+
+  .imageBlock {
+    min-height: var(--block-min-height-md);
+  }
+
+  .heading {
+    font-size: var(--font-size-brand-statement-md);
+    line-height: 2.75rem;
+  }
+}
+
+@media screen and (max-width: 479px) {
+  .textBlock {
     min-height: var(--block-min-height-sm);
   }
 
@@ -80,13 +95,6 @@
     min-height: var(--block-min-height-sm);
   }
 
-  .heading {
-    font-size: var(--font-size-brand-statement-sm);
-    line-height: 2.75rem;
-  }
-}
-
-@media screen and (max-width: 479px) {
   .heading {
     max-width: 100%;
   }
