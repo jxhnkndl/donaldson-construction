@@ -7,9 +7,7 @@
 */
 
 :root {
-  --brand-block-height-lg: 70vh;
-  --brand-block-height-md: 40vh;
-  --brand-block-height-sm: 40vh;
+  --border-radius-image: 0.625rem;
 
   --color-light: #f2f2f2;
   --color-off-light: #f2ece5;
@@ -24,30 +22,24 @@
 
   --font-size-root: 16px;
   --font-size-footer-text: 0.875rem;
-  --font-size-heading-lg: 4rem;
-  --font-size-heading-md: 2.75rem;
-  --font-size-heading-sm: 2rem;
+
   --font-size-small-title: 1.25rem;
   --font-size-subheading-lg: 1.75rem;
-  --font-size-subheading-md: 1.75rem;
-  --font-size-subheading-sm: 1.5rem;
+  --font-size-subheading-md: 1.5rem;
+  --font-size-subheading-sm: 1.25rem;
 
   --font-line-height: 1.5rem;
   --font-letter-spacing-lg: 1px;
   --font-letter-spacing-sm: 0.5px;
 
-  --heading-bottom-margin-lg: 1rem;
-  --heading-bottom-margin-sm: 1rem;
+
 
   --hero-section-height-lg: 75vh;
   --hero-section-height-md: 75vh;
   --hero-section-height-sm: 50vh;
   --hero-section-height-full: 100vh;
 
-  --image-border-radius: 0.625rem;
 }
-
-/* ELEMENT LEVEL STYLES */
 
 * {
   box-sizing: border-box;
@@ -60,52 +52,3 @@ body {
   color: var(--color-dark);
   font-family: 'Articulat CF', 'Roboto', Arial, Helvetica, sans-serif; 
 }
-
-/* FONT ELEMENTS */
-
-.heading {
-  margin-bottom: var(--heading-bottom-margin-lg);
-  font-size: var(--font-size-heading-lg);
-  font-weight: 500;
-}
-
-
-.title {
-  font-size: var(--font-size-small-title);
-  font-weight: 600;
-}
-
-.bodyText {
-  max-width: 80%;
-  margin-bottom: 2.5rem;
-  letter-spacing: var(--font-letter-spacing-lg);
-  line-height: var(--font-line-height);
-}
-
-/* ICON ELEMENTS */
-
-.chevron {
-  margin-left: 0.5rem;
-}
-
-/* MEDIA QUERIES */
-
-@media screen and (max-width: 991px) {
-  .heading {
-    font-size: var(--font-size-heading-md);
-  }
-}
-
-@media screen and (max-width: 767px) {
-  .heading {
-    margin-bottom: var(--heading-bottom-margin-sm);
-    font-size: var(--font-size-heading-sm);
-  }
-
-  .bodyText {
-    max-width: 100%;
-    letter-spacing: var(--font-letter-spacing-sm);
-  }
-}
-
-@media screen and (max-width: 479px) {}
