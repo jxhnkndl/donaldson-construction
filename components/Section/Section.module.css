@@ -1,3 +1,19 @@
+.section {
+  --section-padding-top-lg: 6.5rem;
+  --section-padding-top-md: 5rem;
+  --section-padding-top-sm: 3.5rem;
+
+  --section-padding-bottom-lg: 6.5rem;
+  --section-padding-bottom-md: 5rem;
+  --section-padding-bottom-sm: 3.5rem;
+
+  --section-side-padding-lg: 2rem;
+  --section-side-padding-md: 2rem;
+  --section-side-padding-sm: 1.5rem;
+
+  position: relative;
+}
+
 .sectionXPadded {
   padding-top: var(--section-padding-top-lg);
   padding-bottom: var(--section-padding-bottom-lg);

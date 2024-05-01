@@ -11,10 +11,6 @@
   --brand-block-height-md: 40vh;
   --brand-block-height-sm: 40vh;
 
-  --button-x-padding: 4.5rem;
-  --button-y-padding: 1rem;
-  --button-border-radius: 80px;
-
   --color-light: #f2f2f2;
   --color-off-light: #f2ece5;
   --color-dark: #312e2b;
@@ -26,10 +22,7 @@
   --color-secondary: #f2b703;
   --color-secondary-dark: #f29f04;
 
-  --container-max-width-lg: 1240px;
-
   --font-size-root: 16px;
-
   --font-size-footer-text: 0.875rem;
   --font-size-heading-lg: 4rem;
   --font-size-heading-md: 2.75rem;
@@ -52,18 +45,6 @@
   --hero-section-height-full: 100vh;
 
   --image-border-radius: 0.625rem;
-
-  --section-padding-top-lg: 6.5rem;
-  --section-padding-top-md: 4.5rem;
-  --section-padding-top-sm: 3rem;
-
-  --section-padding-bottom-lg: 6.5rem;
-  --section-padding-bottom-md: 4.5rem;
-  --section-padding-bottom-sm: 3rem;
-
-  --section-side-padding-lg: 2rem;
-  --section-side-padding-md: 2rem;
-  --section-side-padding-sm: 1.5rem;
 }
 
 /* ELEMENT LEVEL STYLES */
@@ -78,10 +59,6 @@ body {
   background-color: var(--color-off-light);
   color: var(--color-dark);
   font-family: 'Articulat CF', 'Roboto', Arial, Helvetica, sans-serif; 
-}
-
-section {
-  position: relative;
 }
 
 /* FONT ELEMENTS */

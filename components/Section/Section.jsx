@@ -4,7 +4,9 @@ const Section = ({ fluid, children }) => {
   return (
     <section
       // Determine x and y padding based on Section's design role
-      className={`${fluid ? styles.sectionXFluid : styles.sectionXPadded}`}>
+      className={`section ${styles.section} ${
+        fluid ? styles.sectionXFluid : styles.sectionXPadded
+      }`}>
       {children}
     </section>
   );
