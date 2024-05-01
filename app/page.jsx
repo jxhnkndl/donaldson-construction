@@ -20,6 +20,7 @@ const HomePage = async () => {
     brandTopImage,
     heroImages,
     projectsCta,
+    projectsHeadline,
     testimonialsHeadline,
   } = data[0];
 
@@ -45,6 +46,26 @@ const HomePage = async () => {
         color='primary'
         heading={brandTopHeadline}
         image={brandTopImage}
+        textOrder={1}
+        imageOrder={2}
+      />
+
+      {/* FEATURED PROJECTS SECTION */}
+      <Section fluid={false}>
+        <Container>
+          <h2 className='heading'>{projectsHeadline}</h2>
+          <Button type='dark' href='/about'>
+            {projectsCta}
+            <IoChevronForward className='chevron' />
+          </Button>
+        </Container>
+      </Section>
+
+      {/* BRAND STATEMENT */}
+      <BrandStatement
+        color='secondary'
+        heading={brandBottomHeadline}
+        image={brandBottomImage}
         textOrder={1}
         imageOrder={2}
       />
