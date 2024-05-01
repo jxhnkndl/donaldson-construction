@@ -23,22 +23,10 @@
   --font-size-root: 16px;
   --font-size-footer-text: 0.875rem;
 
-  --font-size-small-title: 1.25rem;
-  --font-size-subheading-lg: 1.75rem;
-  --font-size-subheading-md: 1.5rem;
-  --font-size-subheading-sm: 1.25rem;
-
-  --font-line-height: 1.5rem;
-  --font-letter-spacing-lg: 1px;
-  --font-letter-spacing-sm: 0.5px;
-
-
-
   --hero-section-height-lg: 75vh;
   --hero-section-height-md: 75vh;
   --hero-section-height-sm: 50vh;
   --hero-section-height-full: 100vh;
-
 }
 
 * {
