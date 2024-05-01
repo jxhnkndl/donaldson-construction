@@ -40,3 +40,9 @@
   background-color: transparent;
   color: var(--color-light);
 }
+
+@media screen and (max-width: 479px) {
+  .button {
+    display: flex;
+  }
+}
