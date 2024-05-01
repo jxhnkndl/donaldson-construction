@@ -7,12 +7,12 @@
 */
 
 :root {
-  --button-x-padding: 2.25rem;
+  --button-x-padding: 4.5rem;
   --button-y-padding: 1rem;
   --button-border-radius: 80px;
 
   --color-light: #f2f2f2;
-  --color-off-light: ##f2ece5;
+  --color-off-light: #f2ece5;
   --color-dark: #312e2b;
   --color-dark-opacity-filter: rgba(49, 46, 43, 0.6);
   --color-charcoal: #4d4d4d;
@@ -41,6 +41,9 @@
   --font-letter-spacing-lg: 1px;
   --font-letter-spacing-sm: 0.5px;
 
+  --heading-bottom-margin-lg: 1rem;
+  --heading-bottom-margin-sm: 1rem;
+
   --hero-section-height-lg: 75vh;
   --hero-section-height-md: 75vh;
   --hero-section-height-sm: 50vh;
@@ -61,7 +64,7 @@
   --section-side-padding-sm: 1.5rem;
 }
 
-/* ELEMENT STYLES */
+/* ELEMENT LEVEL STYLES */
 
 * {
   box-sizing: border-box;
@@ -70,7 +73,70 @@
 }
 
 body {
-  background-color: var(--color-primary-pale);
+  background-color: var(--color-off-light);
   color: var(--color-dark);
   font-family: 'Articulat CF', 'Roboto', Arial, Helvetica, sans-serif; 
 }
+
+section {
+  position: relative;
+}
+
+/* FONT ELEMENTS */
+
+.heading {
+  margin-bottom: var(--heading-bottom-margin-lg);
+  font-size: var(--font-size-heading-lg);
+  font-weight: 500;
+}
+
+.brandStatement {
+  font-size: var(--font-size-brand-statement-lg);
+}
+
+.title {
+  font-size: var(--font-size-small-title);
+  font-weight: 600;
+}
+
+.bodyText {
+  max-width: 80%;
+  margin-bottom: 2.5rem;
+  letter-spacing: var(--font-letter-spacing-lg);
+  line-height: var(--font-line-height);
+}
+
+/* ICON ELEMENTS */
+
+.chevron {
+  margin-left: 0.5rem;
+}
+
+/* MEDIA QUERIES */
+
+@media screen and (max-width: 991px) {
+  .heading {
+    font-size: var(--font-size-heading-md);
+  }
+
+  .brandStatement {
+    font-size: var(--font-size-brand-statement-md);
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .heading {
+    margin-bottom: var(--heading-bottom-margin-sm);
+    font-size: var(--font-size-heading-sm);
+  }
+
+  .brandStatement {
+    font-size: var(--font-size-brand-statement-sm);
+  }
+
+  .bodyText {
+    letter-spacing: var(--font-letter-spacing-sm);
+  }
+}
+
+@media screen and (max-width: 479px) {}

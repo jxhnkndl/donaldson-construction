@@ -1,6 +1,10 @@
 import { fetchHomePage } from '@/sanity/utils/homePageActions';
 
+import Button from '@/components/Button/Button';
 import Carousel from '@/components/Carousel/Carousel';
+import Container from '@/components/Container/Container';
+import { IoChevronForward } from 'react-icons/io5';
+import Section from '@/components/Section/Section';
 
 const HomePage = async () => {
   const data = await fetchHomePage();
@@ -20,7 +24,22 @@ const HomePage = async () => {
 
   return (
     <main>
+      {/* HERO CAROUSEL */}
       <Carousel images={heroImages} />
+
+      {/* ABOUT SECTION */}
+      <Section fluid={false}>
+        <Container>
+          <h1 className='heading'>{aboutHeadline}</h1>
+          <p className='bodyText'>{aboutText}</p>
+          <Button type='dark' href='/about'>
+            {aboutCta}
+            <IoChevronForward className='chevron' />
+          </Button>
+        </Container>
+      </Section>
+
+      {/* BRAND STATEMENT */}
     </main>
   );
 };
