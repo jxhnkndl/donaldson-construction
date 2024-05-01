@@ -1,4 +1,3 @@
-import Image from 'next/image';
 import { urlForImage } from '@/sanity/lib/image';
 
 import styles from './BrandStatement.module.css';

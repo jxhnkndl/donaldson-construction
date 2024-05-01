@@ -1,4 +1,12 @@
 .grid {
+  --block-min-height-lg: 60vh;
+  --block-min-height-md: 50vh;
+  --block-min-height-sm: 50vh;
+
+  --font-size-brand-statement-lg: 3.25rem;
+  --font-size-brand-statement-md: 2.75rem;
+  --font-size-brand-statement-sm: 2.25rem;
+
   position: relative;
   display: grid;
   /* Two columns of equal width; 1fr means equal fractional units */
@@ -7,7 +15,7 @@
 }
 
 .textBlock {
-  min-height: 60vh;
+  min-height: var(--block-min-height-lg);
   position: relative;
   background-image: url('../../assets/blueprint-bg.jpg');
   background-position: center;
@@ -32,7 +40,7 @@
 }
 
 .image {
-  min-height: 60vh;
+  min-height: var(--block-min-height-lg);
 }
 
 .heading {
@@ -44,11 +52,11 @@
 
 @media screen and (max-width: 991px) {
   .textBlock {
-    min-height: 50vh;
+    min-height: var(--block-min-height-md);
   }
 
   .imageBlock {
-    min-height: 50vh;
+    min-height: var(--block-min-height-md);
   }
 
   .heading {
@@ -62,6 +70,14 @@
   .grid {
     /* Single column rwo; 1fr = entire width of container */
     grid-template-columns: 1fr;
+  }
+
+  .textBlock {
+    min-height: var(--block-min-height-sm);
+  }
+
+  .imageBlock {
+    min-height: var(--block-min-height-sm);
   }
 
   .heading {
