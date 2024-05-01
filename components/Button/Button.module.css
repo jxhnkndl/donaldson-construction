@@ -1,0 +1,36 @@
+.link {
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.button {
+  border-radius: var(--button-border-radius);
+  display: inline-block;
+  padding: var(--button-y-padding) var(--button-x-padding);
+  transition: all 200ms ease-in-out;
+}
+
+.buttonDark,
+.buttonDark:active {
+  background-color: var(--color-dark);
+  border: 1px solid var(--color-dark);
+  color: var(--color-light);
+}
+
+.buttonDark:hover {
+  background-color: transparent;
+  color: var(--color-dark);
+}
+
+.buttonSecondary,
+.buttonSecondary:active {
+  background-color: var(--color-secondary);
+  border: 1px solid var(--color-secondary);
+  color: var(--color-dark)
+}
+
+.buttonSecondary:hover {
+  background-color: transparent;
+  border: 1px solid var(--color-light);
+  color: var(--color-light);
+}
