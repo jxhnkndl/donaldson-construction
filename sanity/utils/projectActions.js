@@ -9,7 +9,7 @@ export async function fetchFeatured() {
   });
 
   return client.fetch(
-    groq`*[_type == 'project' && featured == true]{
+    groq`*[_type == 'project' && featured == true && hidden == false]{
       _id,
       title,
       location,
