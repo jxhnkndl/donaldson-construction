@@ -6,6 +6,8 @@ const Heading = ({ level, children }) => {
       return <h1 className={`${styles.heading}`}>{children}</h1>;
     case 'h2':
       return <h2 className={`${styles.heading}`}>{children}</h2>;
+    default:
+      return;
   }
 };
 
