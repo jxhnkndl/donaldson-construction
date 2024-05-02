@@ -7,8 +7,8 @@ import Button from '@/components/Button/Button';
 import Carousel from '@/components/Carousel/Carousel';
 import Container from '@/components/Container/Container';
 import Heading from '@/components/Heading/Heading';
+import ProjectGrid from '@/components/ProjectGrid/ProjectGrid';
 import Section from '@/components/Section/Section';
-import Subheading from '@/components/Subheading/Subheading';
 
 const HomePage = async () => {
   const pageData = await fetchHomePage();
@@ -38,7 +38,7 @@ const HomePage = async () => {
         <Container>
           <Heading level={'h1'}>{aboutHeadline}</Heading>
           <BodyText>{aboutText}</BodyText>
-          <Button type='dark' href='/about'>
+          <Button type='dark' href='/'>
             {aboutCta}
           </Button>
         </Container>
@@ -58,6 +58,10 @@ const HomePage = async () => {
           <Heading level={'h2'}>
             {projectsHeadline}
           </Heading>
+          <ProjectGrid projects={projectData} />
+          <Button type='dark' href="/">
+            {projectsCta}
+          </Button>
         </Container>
       </Section>
 

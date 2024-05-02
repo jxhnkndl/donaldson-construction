@@ -1,0 +1,48 @@
+.link {
+  color: var(--color-dark);
+  text-decoration: none;
+}
+
+.imageContainer {
+  aspect-ratio: 16 / 9;
+  position: relative;
+  margin-bottom: 1.5rem;
+  cursor: pointer;
+  transition: all 150ms ease-in-out;
+}
+
+.imageContainer:hover {
+  transform: scale(1.015);
+}
+
+.imageContainer:active {
+  transform: scale(0.995);
+}
+
+.image {
+  border-radius: var(--border-radius-image);
+}
+
+.title:hover {
+  color: var(--color-dark-opacity-filter);
+}
+
+.icon {
+  margin-left: 0.25rem;
+}
+
+@media screen and (max-width: 991px) {
+  .imageContainer {
+    margin-bottom: 1.25rem;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .imageContainer {
+    margin-bottom: 1rem;
+  }
+}
+
+@media screen and (max-width: 479px) {
+  
+}
