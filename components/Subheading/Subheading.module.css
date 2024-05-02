@@ -1,16 +1,23 @@
 .subheading {
-  --font-size-subheading-lg: 2rem;
-  --font-size-subheading-md: 1.75rem;
-  --font-size-subheading-sm: 1.5rem;
+  --font-size-subheading-lg: 1.75rem;
+  --font-size-subheading-md: 1.5rem;
+  --font-size-subheading-sm: 1.25rem;
 
   --font-weight-subheading: 500;
 
-  --margin-subheading-bottom-lg: 1rem;
+  --margin-subheading-bottom-lg: 0.5rem;
   --margin-subheading-bottom-sm: 1rem;
 
   margin-bottom: var(--margin-subheading-bottom-lg);
+  display: flex;
+  align-items: center;
   font-size: var(--font-size-subheading-lg);
   font-weight: var(--font-weight-subheading);
+  cursor: pointer;
+}
+
+.subheading:hover {
+  color: var(--color-dark-opacity-filter)
 }
 
 @media screen and (max-width: 991px) {
