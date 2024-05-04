@@ -22,11 +22,16 @@
 
   --font-size-root: 16px;
   --font-size-footer-text: 0.875rem;
+  --font-body-line-height: 1.75rem;
+  --font-body-letter-spacing-lg: 1px;
+  --font-body-letter-spacing-sm: 0.5rem;
 
   --hero-section-height-lg: 75vh;
   --hero-section-height-md: 75vh;
   --hero-section-height-sm: 50vh;
   --hero-section-height-full: 100vh;
+
+  --testimonial-height: 32rem;
 }
 
 * {
