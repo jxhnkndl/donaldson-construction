@@ -1,0 +1,10 @@
+.container {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--border-radius-image);
+}
+
+.track {
+  display: flex;
+}

@@ -1,5 +1,6 @@
 import { fetchHomePage } from '@/sanity/utils/homePageActions';
 import { fetchFeatured } from '@/sanity/utils/projectActions';
+import { fetchTestimonials } from '@/sanity/utils/testimonialActions';
 
 import BodyText from '@/components/BodyText/BodyText';
 import BrandBlock from '@/components/BrandBlock/BrandBlock';
@@ -9,10 +10,12 @@ import Container from '@/components/Container/Container';
 import Heading from '@/components/Heading/Heading';
 import ProjectGrid from '@/components/ProjectGrid/ProjectGrid';
 import Section from '@/components/Section/Section';
+import TestimonialsSlider from '@/components/TestimonialsSlider/TestimonialsSlider';
 
 const HomePage = async () => {
   const pageData = await fetchHomePage();
   const projectData = await fetchFeatured();
+  const testimonialData = await fetchTestimonials();
 
   const {
     aboutCta,
@@ -73,6 +76,15 @@ const HomePage = async () => {
         order={2}
       />
 
+      {/* TESTIMONIALS BLOCK */}
+      <Section fluid={false}>
+        <Container>
+          <Heading level={'h2'}>
+            {testimonialsHeadline}
+          </Heading>
+          <TestimonialsSlider testimonials={testimonialData} />
+        </Container>
+      </Section>
     </main>
   );
 };
