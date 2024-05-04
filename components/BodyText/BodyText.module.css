@@ -1,12 +1,12 @@
 .bodyText {
-  line-height: 1.5rem;
-  letter-spacing: 1px;
+  line-height: var(--font-body-line-height);
+  letter-spacing: var(--font-body-letter-spacing-lg);
   margin-bottom: 2.5rem;
 }
 
 @media screen and (max-width: 767px) {
   .bodyText {
-    letter-spacing: 0.5px;
+    letter-spacing: var(--font-body-letter-spacing-sm);
     margin-bottom: 2rem;
   }
 }
