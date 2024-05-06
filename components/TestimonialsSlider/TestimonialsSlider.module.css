@@ -1,10 +1,7 @@
 .container {
   width: 100%;
-  position: relative;
-  overflow: hidden;
+  min-height: var(--testimonial-height);
   border-radius: var(--border-radius-image);
+  overflow: hidden;
 }
 
-.track {
-  display: flex;
-}

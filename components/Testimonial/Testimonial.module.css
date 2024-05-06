@@ -2,12 +2,21 @@
   min-width: 100%;
   min-height: var(--testimonial-height);
   flex: 0 0;
+  position: relative;
+  border-radius: var(--border-radius-image);
+  background-color: var(--color-primary-pale);
+}
+
+.content {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
   padding: 4rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  border-radius: var(--border-radius-image);
-  background-color: var(--color-primary-pale);
 }
 
 .imageContainer {
