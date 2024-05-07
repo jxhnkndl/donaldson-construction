@@ -1,6 +1,6 @@
 .container {
   min-width: 100%;
-  min-height: var(--testimonial-height);
+  min-height: var(--testimonial-height-lg);
   flex: 0 0;
   position: relative;
   border-radius: var(--border-radius-image);
@@ -43,6 +43,7 @@
 
 .title {
   margin-bottom: 1rem;
+  font-size: 14/16rem;
   letter-spacing: 1px;
 }
 
@@ -54,12 +55,36 @@
 
 .testimonialBody {
   font-style: italic;
-  line-height: var(--font-body-line-height);
+  line-height: 1.4rem;
   letter-spacing: var(--font-body-letter-spacing-lg);
 }
 
+@media screen and (max-width: 991px) {
+  .content {
+    padding: 3rem;
+  }
+}
+
 @media screen and (max-width: 767px) {
+  .container {
+    min-height: var(--testimonial-height-md);
+  }
+  
+  .imageContainer {
+    width: 3rem;
+  }
+
   .testimonialBody {
     letter-spacing: var(--font-body-letter-spacing-sm);
+  }
+}
+
+@media screen and (max-width: 479px) {
+  .container {
+    min-height: var(--testimonial-height-sm);
+  }
+  
+  .content {
+    padding: 2rem;
   }
 }

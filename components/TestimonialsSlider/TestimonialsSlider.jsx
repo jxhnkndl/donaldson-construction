@@ -1,7 +1,6 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
 
 import Testimonial from '../Testimonial/Testimonial';
 
@@ -9,14 +8,14 @@ import styles from './TestimonialsSlider.module.css';
 
 const TestimonialsSlider = ({ testimonialData }) => {
   const [current, setCurrent] = useState(0);
-  const [isVisible, setIsVisible] = useState(true);
 
   useEffect(() => {
+    // Cycle through testimonial slides every 7.5 seconds
     const slideInterval = setInterval(() => {
       current === testimonialData.length - 1
         ? setCurrent(0)
         : setCurrent(current + 1);
-    }, 3000);
+    }, 7500);
 
     return () => clearInterval(slideInterval);
   }, [current]);
