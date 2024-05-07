@@ -9,21 +9,38 @@ import TestimonialsNav from '../TestimonialsNav/TestimonialsNav';
 
 const TestimonialsSlider = ({ testimonialData }) => {
   const [current, setCurrent] = useState(0);
+  const [direction, setDirection] = useState(1);
 
   useEffect(() => {
-    // Cycle through testimonial slides every 7.5 seconds
     const slideInterval = setInterval(() => {
-      current === testimonialData.length - 1
-        ? setCurrent(0)
-        : setCurrent(current + 1);
+      handleNext();
     }, 7500);
 
     return () => clearInterval(slideInterval);
   }, [current]);
 
+  const handleNext = () => {
+    setDirection(1);
+    current === testimonialData.length - 1
+      ? setCurrent(0)
+      : setCurrent(current + 1);
+  };
+
+  const handlePrev = () => {
+    setDirection(0);
+    current === 0
+      ? setCurrent(testimonialData.length - 1)
+      : setCurrent(current - 1);
+  };
+
   return (
     <div className={`${styles.container}`}>
-      <Testimonial testimonial={testimonialData[current]} />
+      <Testimonial
+        testimonial={testimonialData[current]}
+        direction={direction}
+        handleNext={handleNext}
+        handlePrev={handlePrev}
+      />
       <TestimonialsNav
         testimonials={testimonialData}
         current={current}

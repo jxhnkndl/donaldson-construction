@@ -1,39 +1,41 @@
 import Image from 'next/image';
 import { motion, AnimatePresence } from 'framer-motion';
+import { useSwipeable } from 'react-swipeable';
 
 import quoteIcon from '../../assets/images/icon-quote.png';
 
 import styles from './Testimonial.module.css';
 
-const variants = {
-  initial: {
-    opacity: 0,
-    transform: 'translateX(100%)',
-  },
-  animate: {
-    opacity: 1,
-    transform: 'translateX(0%)',
-  },
-  exit: {
-    opacity: 1,
-    transform: 'translateX(-100%)',
-  },
-};
-
-const Testimonial = ({ testimonial }) => {
+const Testimonial = ({ testimonial, direction, handleNext, handlePrev }) => {
   const { _id, name, title, company, testimonialText } = testimonial;
 
+  const handlers = useSwipeable({
+    onSwipedLeft: () => handleNext(),
+    onSwipedRight: () => handlePrev(),
+    swipeDuration: 500,
+    preventScrollOnSwipe: true,
+  });
+
   return (
-    <div className={`${styles.container}`}>
+    <div className={`${styles.container}`} {...handlers}>
       <AnimatePresence>
         <motion.div
           key={_id}
           className={`${styles.content}`}
-          variants={variants}
-          initial='initial'
-          animate='animate'
-          exit='exit'
-          transition={{ duration: 0.5, ease: 'easeInOut' }}>
+          initial={{
+            opacity: 0,
+            transform:
+              direction === 1 ? 'translateX(100%)' : 'translateX(-100%)',
+          }}
+          animate={{
+            opacity: 1,
+            transform: 'translateX(0%)',
+          }}
+          exit={{
+            opacity: 0,
+            transition: { duration: 0.25 }
+          }}
+          transition={{ duration: 0.5, ease: 'easeOut' }}>
           <div className={`${styles.imageContainer}`}>
             <Image
               className={`${styles.image}`}
