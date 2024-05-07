@@ -1,6 +1,7 @@
 .container {
   min-width: 100%;
   min-height: var(--testimonial-height-lg);
+  margin-bottom: 2rem;
   flex: 0 0;
   position: relative;
   border-radius: var(--border-radius-image);
@@ -44,7 +45,7 @@
 
 .title {
   margin-bottom: 1rem;
-  font-size: 14/16rem;
+  font-size: 0.875rem;
   letter-spacing: 1px;
 }
 

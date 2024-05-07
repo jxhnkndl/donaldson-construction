@@ -5,6 +5,7 @@ import { useState, useEffect } from 'react';
 import Testimonial from '../Testimonial/Testimonial';
 
 import styles from './TestimonialsSlider.module.css';
+import TestimonialsNav from '../TestimonialsNav/TestimonialsNav';
 
 const TestimonialsSlider = ({ testimonialData }) => {
   const [current, setCurrent] = useState(0);
@@ -23,6 +24,11 @@ const TestimonialsSlider = ({ testimonialData }) => {
   return (
     <div className={`${styles.container}`}>
       <Testimonial testimonial={testimonialData[current]} />
+      <TestimonialsNav
+        testimonials={testimonialData}
+        current={current}
+        setCurrent={setCurrent}
+      />
     </div>
   );
 };

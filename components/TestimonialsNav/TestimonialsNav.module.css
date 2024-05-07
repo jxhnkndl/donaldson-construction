@@ -1,0 +1,26 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.dots {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.dot {
+  width: 25px;
+  height: 10px;
+  border-radius: 100px;
+  background-color: var(--color-dark-opacity-filter);
+  cursor: pointer;
+  transition: all 250ms ease-in-out;
+}
+
+.active {
+  width: 50px;
+  background-color: var(--color-dark);
+}
