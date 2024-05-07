@@ -82,7 +82,7 @@ const HomePage = async () => {
           <Heading level={'h2'}>
             {testimonialsHeadline}
           </Heading>
-          <TestimonialsSlider testimonials={testimonialData} />
+          <TestimonialsSlider testimonialData={testimonialData} />
         </Container>
       </Section>
     </main>
