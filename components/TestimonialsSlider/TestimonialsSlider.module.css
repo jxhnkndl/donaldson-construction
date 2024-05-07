@@ -1,6 +1,7 @@
 .container {
   width: 100%;
   min-height: var(--testimonial-height-lg);
+  margin-top: 2rem;
   border-radius: var(--border-radius-image);
   overflow: hidden;
 }
