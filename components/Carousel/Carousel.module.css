@@ -1,6 +1,6 @@
 .carousel {
   min-height: var(--hero-section-height-lg);
-  transition: all 500ms ease-in-out;
+  position: relative;
 }
 
 @media screen and (max-width: 991px) {
