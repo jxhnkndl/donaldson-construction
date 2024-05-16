@@ -61,6 +61,16 @@
   background: linear-gradient(135deg, rgba(242,116,6,0.75) 0%, rgba(242,159,4,0.7) 100%);
 }
 
+@media screen and (max-width: 991px) {
+  .grid {
+    grid-template-columns: 3fr 2fr;
+  }
+
+  .content {
+    max-width: 350px;
+  }
+}
+
 @media screen and (max-width: 767px) {
   .wrapper {
     min-height: 30rem;
