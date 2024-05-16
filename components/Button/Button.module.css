@@ -9,9 +9,10 @@
   padding: var(--button-y-padding) var(--button-x-padding);
   outline: none;
   border-radius: var(--button-border-radius);
-  transition: all 200ms ease-in-out;
+  font-weight: 400;
   text-decoration: none;
   text-transform: uppercase;
+  transition: all 200ms ease-in-out;
 }
 
 .dark,
