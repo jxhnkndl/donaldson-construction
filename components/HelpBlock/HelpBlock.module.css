@@ -73,10 +73,6 @@
 
 @media screen and (max-width: 767px) {
   .wrapper {
-    min-height: 30rem;
-  }
-  
-  .grid {
-    grid-template-columns: 1fr;
+    display: none;
   }
 }
