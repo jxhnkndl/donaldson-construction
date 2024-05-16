@@ -10,8 +10,6 @@ import styles from './Carousel.module.css';
 const Carousel = ({ images }) => {
   const [current, setCurrent] = useState(0);
 
-  console.log(images);
-
   useEffect(() => {
     const imageInterval = setInterval(cycleImage, 7500);
 
@@ -29,7 +27,7 @@ const Carousel = ({ images }) => {
 
   return (
     <div className={`${styles.carousel}`}>
-      <AnimatePresence mode={'sync'}>
+      <AnimatePresence initial={false} mode={'sync'}>
         <motion.div
           key={images[current].href}
           initial={{ opacity: 0 }}
