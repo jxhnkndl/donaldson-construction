@@ -1,0 +1,72 @@
+.wrapper {
+  position: relative;
+}
+
+.grid {
+  min-height: 35rem;
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0;
+}
+
+.bgImage {
+  background-image: url('../../assets/images/help-block-bg.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.bgBlur {
+  backdrop-filter: blur(6px);
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 5;
+}
+
+.bgCharcoal {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--color-charcoal);
+  opacity: 0.9;
+}
+
+.content {
+  min-width: 50%;
+  max-width: 420px;
+  line-height: var(--font-body-line-height);
+  letter-spacing: var(--font-body-letter-spacing-lg);
+  color: var(--color-light);
+}
+
+.heading {
+  margin-bottom: 1.5rem;
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+.body {
+  margin-bottom: 3rem;
+}
+
+.bgGradient {
+  background: linear-gradient(135deg, rgba(242,116,6,0.75) 0%, rgba(242,159,4,0.7) 100%);
+}
+
+@media screen and (max-width: 767px) {
+  .wrapper {
+    min-height: 30rem;
+  }
+  
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
