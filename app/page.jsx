@@ -8,7 +8,7 @@ import Button from '@/components/Button/Button';
 import Carousel from '@/components/Carousel/Carousel';
 import Container from '@/components/Container/Container';
 import Heading from '@/components/Heading/Heading';
-import HelpBlockWide from '@/components/HelpBlockWide/HelpBlockWide';
+import HelpBlockDesktop from '@/components/HelpBlockDesktop/HelpBlockDesktop';
 import ProjectGrid from '@/components/ProjectGrid/ProjectGrid';
 import Section from '@/components/Section/Section';
 import TestimonialsSlider from '@/components/TestimonialsSlider/TestimonialsSlider';
@@ -87,7 +87,7 @@ const HomePage = async () => {
         </Container>
       </Section>
 
-      <HelpBlockWide />
+      <HelpBlockDesktop />
     </main>
   );
 };

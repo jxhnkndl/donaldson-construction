@@ -2,9 +2,9 @@ import { fetchHelpBlock } from '@/sanity/utils/helpBlockActions';
 
 import Button from '../Button/Button';
 
-import styles from './HelpBlockWide.module.css';
+import styles from './HelpBlockDesktop.module.css';
 
-const HelpBlockWide = async () => {
+const HelpBlockDesktop = async () => {
   const helpBlockData = await fetchHelpBlock();
   
   const { helpHeadline, helpText, helpCta } = helpBlockData[0];
@@ -31,4 +31,4 @@ const HelpBlockWide = async () => {
   );
 };
 
-export default HelpBlockWide;
+export default HelpBlockDesktop;
