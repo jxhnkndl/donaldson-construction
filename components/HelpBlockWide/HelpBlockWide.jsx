@@ -1,7 +1,14 @@
+import { fetchHelpBlock } from '@/sanity/utils/helpBlockActions';
+
 import Button from '../Button/Button';
+
 import styles from './HelpBlockWide.module.css';
 
-const HelpBlockWide = () => {
+const HelpBlockWide = async () => {
+  const helpBlockData = await fetchHelpBlock();
+  
+  const { helpHeadline, helpText, helpCta } = helpBlockData[0];
+
   return (
     <section className={`${styles.wrapper}`}>
       <div className={`${styles.grid} ${styles.bgImage}`}>
@@ -11,15 +18,10 @@ const HelpBlockWide = () => {
       <div className={`${styles.grid} ${styles.overlay}`}>
         <div className={`${styles.bgCharcoal}`}>
           <div className={`${styles.content}`}>
-            <h2 className={`${styles.heading}`}>How can we help?</h2>
-            <p className={`${styles.body}`}>
-              Donaldson Construction provides commercial construction services
-              to clients across Central Virginia. Contact our dedicated and
-              experienced team of professional builders to discuss your next
-              project.
-            </p>
-            <Button type='secondary' href="/contact">
-              Contact Us
+            <h2 className={`${styles.heading}`}>{helpHeadline}</h2>
+            <p className={`${styles.body}`}>{helpText}</p>
+            <Button type='secondary' href='/contact'>
+              {helpCta}
             </Button>
           </div>
         </div>
