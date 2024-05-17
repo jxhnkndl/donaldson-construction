@@ -62,12 +62,8 @@
 }
 
 @media screen and (max-width: 991px) {
-  .grid {
-    grid-template-columns: 3fr 2fr;
-  }
-
   .content {
-    max-width: 350px;
+    max-width: 325px;
   }
 }
 

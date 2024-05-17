@@ -1,7 +1,7 @@
 import Button from '../Button/Button';
-import styles from './HelpBlock.module.css';
+import styles from './HelpBlockWide.module.css';
 
-const HelpBlock = () => {
+const HelpBlockWide = () => {
   return (
     <section className={`${styles.wrapper}`}>
       <div className={`${styles.grid} ${styles.bgImage}`}>
@@ -29,4 +29,4 @@ const HelpBlock = () => {
   );
 };
 
-export default HelpBlock;
+export default HelpBlockWide;
