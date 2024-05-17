@@ -70,10 +70,6 @@
 }
 
 @media screen and (max-width: 767px) {
-  .grid {
-    grid-template-columns: 1fr;
-  }
-
   .block {
     min-height: var(--block-height-md);
   }
@@ -85,6 +81,10 @@
 }
 
 @media screen and (max-width: 479px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+  
   .block {
     min-height: var(--block-height-sm);
   }
