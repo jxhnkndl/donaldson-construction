@@ -30,10 +30,6 @@ module.exports = {
       sans: ['Articulat CF', 'Roboto', 'sans-serif']
     },
     extend: {
-      fontWeight: {
-        'fw-body': '300',
-        'fw-heading': '500'
-      },
       lineHeight: {
         'lh-body': '1.75rem'
       },
