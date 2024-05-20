@@ -1,3 +1,5 @@
+const { keyframes } = require('styled-components');
+
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
@@ -6,12 +8,12 @@ module.exports = {
     './components/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   theme: {
-    // screens: {
-    //   xl: '1200px',
-    //   lg: '1024px',
-    //   md: '768px',
-    //   sm: '479px',
-    // },
+    screens: {
+      xl: '1200px',
+      lg: '1024px',
+      md: '768px',
+      sm: '479px',
+    },
     colors: {
       light: '#f2f2f2',
       'off-light': '#f2ece5',
