@@ -20,7 +20,7 @@ const BrandBlock = ({ color, text, image, order }) => {
           className={`absolute top-0 right-0 bottom-0 left-0 z-10 flex flex-col justify-center items-center ${
             color === 'primary' ? 'bg-primary' : 'bg-secondary'
           }`}>
-          <h2 className='max-w-full md:max-w-[75%] lg:max-w-[60%] px-6 md:px-0 text-[2.25rem] md:text-[2.75rem] lg:text-[3.25] leading-[2.75rem] md:leading-[3.25rem] lg:leading-[3.75rem] font-semibold'>
+          <h2 className='max-w-full md:max-w-[75%] lg:max-w-[60%] px-6 md:px-0 text-[2.25rem] md:text-[2.75rem] lg:text-[3.25] leading-[2.75rem] md:leading-[3.25rem] lg:leading-[3.75rem] font-medium'>
             {text}
           </h2>
         </div>
