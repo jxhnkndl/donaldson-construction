@@ -2,7 +2,11 @@ import { fetchHomePage } from '@/sanity/utils/homePageActions';
 import { fetchFeatured } from '@/sanity/utils/projectActions';
 import { fetchTestimonials } from '@/sanity/utils/testimonialActions';
 
-import Carousel from '@/components/Carousel/Carousel';
+import Carousel from '@/components/Carousel';
+import Section from '@/components/Section';
+import Container from '@/components/Container';
+import Heading from '@/components/Heading';
+import BodyText from '@/components/BodyText';
 
 const HomePage = async () => {
   const pageData = await fetchHomePage();
@@ -27,6 +31,14 @@ const HomePage = async () => {
     <main>
       {/* HERO SECTION */}
       <Carousel images={heroImages} />
+
+      {/* ABOUT SECTION */}
+      <Section>
+        <Container>
+          <Heading level='h1'>{aboutHeadline}</Heading>
+          <BodyText>{aboutText}</BodyText>
+        </Container>
+      </Section>
     </main>
   );
 };
