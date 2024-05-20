@@ -7,6 +7,7 @@ import Section from '@/components/Section';
 import Container from '@/components/Container';
 import Heading from '@/components/Heading';
 import BodyText from '@/components/BodyText';
+import Button from '@/components/Button';
 
 const HomePage = async () => {
   const pageData = await fetchHomePage();
@@ -37,6 +38,7 @@ const HomePage = async () => {
         <Container>
           <Heading level='h1'>{aboutHeadline}</Heading>
           <BodyText>{aboutText}</BodyText>
+          <Button type="dark" href='/about'>{aboutCta}</Button>
         </Container>
       </Section>
     </main>
