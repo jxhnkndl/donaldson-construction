@@ -4,7 +4,7 @@ import { urlForImage } from '@/sanity/lib/image';
 
 import BodyText from './BodyText';
 import { IoChevronForward } from 'react-icons/io5';
-import Subheading from './Subheading/Subheading';
+import Subheading from './Subheading';
 
 import styles from './Project.module.css';
 
