@@ -9,6 +9,7 @@ import Heading from '@/components/Heading';
 import BodyText from '@/components/BodyText';
 import Button from '@/components/Button';
 import BrandBlock from '@/components/BrandBlock';
+import ProjectGrid from '@/components/ProjectGrid';
 
 const HomePage = async () => {
   const pageData = await fetchHomePage();
@@ -52,6 +53,14 @@ const HomePage = async () => {
         image={brandBottomImage}
         order={1}
       />
+
+      {/* FEATURED PROJECTS */}
+      <Section>
+        <Container>
+          <Heading level='h2'>{projectsHeadline}</Heading>
+          <ProjectGrid projects={projectData} />
+        </Container>
+      </Section>
     </main>
   );
 };

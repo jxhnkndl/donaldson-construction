@@ -5,6 +5,7 @@ import blueprintBg from '../assets/images/blueprint-bg.jpg';
 const BrandBlock = ({ color, text, image, order }) => {
   return (
     <section className='grid grid-cols-1 md:grid-cols-2 gap-0'>
+      {/* COLOR CONTENT BLOCK */}
       <div
         className={`${blockStyles} ${
           order === 1 ? 'order-first' : 'order-last'
@@ -24,6 +25,8 @@ const BrandBlock = ({ color, text, image, order }) => {
           </h2>
         </div>
       </div>
+
+      {/* PHOTO BLOCK */}
       <div
         className={`${blockStyles} ${
           order === 2 ? 'order-first' : 'order-last'
