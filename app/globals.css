@@ -1,52 +1,6 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 @import url("https://use.typekit.net/koc6zfn.css");
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300&display=swap');
-
-/*  MD: 991px
-    SM: 767px
-    XS: 479px
-*/
-
-:root {
-  --border-radius-image: 0.625rem;
-
-  --color-light: #f2f2f2;
-  --color-off-light: #f2ece5;
-  --color-dark: #312e2b;
-  --color-dark-opacity-filter: rgba(49, 46, 43, 0.6);
-  --color-charcoal: #4d4d4d;
-  --color-primary: #f28706;
-  --color-primary-dark: #f27406;
-  --color-primary-pale: #f1e4d3;
-  --color-secondary: #f2b703;
-  --color-secondary-dark: #f29f04;
-
-  --font-body-line-height: 1.75rem;
-  --font-body-letter-spacing-lg: 1px;
-  --font-body-letter-spacing-sm: 0.5px;
-  --font-size-root: 16px;
-  --font-size-footer-text: 0.875rem;
-  --font-weight-body: 300;
-  --font-weight-headline: 500;
-
-  --hero-section-height-lg: 75vh;
-  --hero-section-height-md: 75vh;
-  --hero-section-height-sm: 50vh;
-  --hero-section-height-full: 100vh;
-
-  --testimonial-height-lg: 32rem;
-  --testimonial-height-md: 36rem;
-  --testimonial-height-sm: 40rem;
-}
-
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-body {
-  background-color: var(--color-off-light);
-  color: var(--color-dark);
-  font-family: 'Articulat CF', 'Roboto', Arial, Helvetica, sans-serif; 
-  font-weight: 300;
-}
