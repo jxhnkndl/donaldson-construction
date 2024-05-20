@@ -8,6 +8,7 @@ import Container from '@/components/Container';
 import Heading from '@/components/Heading';
 import BodyText from '@/components/BodyText';
 import Button from '@/components/Button';
+import BrandBlock from '@/components/BrandBlock';
 
 const HomePage = async () => {
   const pageData = await fetchHomePage();
@@ -38,9 +39,19 @@ const HomePage = async () => {
         <Container>
           <Heading level='h1'>{aboutHeadline}</Heading>
           <BodyText>{aboutText}</BodyText>
-          <Button type="dark" href='/about'>{aboutCta}</Button>
+          <Button type='dark' href='/about'>
+            {aboutCta}
+          </Button>
         </Container>
       </Section>
+
+      {/* BRAND BLOCK */}
+      <BrandBlock
+        color='primary'
+        text={brandTopHeadline}
+        image={brandBottomImage}
+        order={1}
+      />
     </main>
   );
 };
