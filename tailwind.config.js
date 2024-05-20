@@ -23,20 +23,13 @@ module.exports = {
       'primary-dark': '#f27406',
       'primary-pale': '#f1e4d3',
       secondary: '#f2b703',
-      'secondary-dark': '#f29f04'
+      'secondary-dark': '#f29f04',
+      transparent: 'transparent'
     },
     fontFamily: {
       sans: ['Articulat CF', 'Roboto', 'sans-serif']
     },
     extend: {
-      fontSize: {
-        'fs-xl': '3.125rem',
-        'fs-lg': '2.5rem',
-        'fs-md': '2rem',
-        'fs-root': '1rem',
-        'fs-sm': '1.25rem',
-        'fs-xs': '0.875rem'
-      },
       fontWeight: {
         'fw-body': '300',
         'fw-heading': '500'
