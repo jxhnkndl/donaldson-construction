@@ -50,7 +50,7 @@ const HomePage = async () => {
       <BrandBlock
         color='primary'
         text={brandTopHeadline}
-        image={brandBottomImage}
+        image={brandTopImage}
         order={1}
       />
 
@@ -61,6 +61,14 @@ const HomePage = async () => {
           <ProjectGrid projects={projectData} />
         </Container>
       </Section>
+
+      {/* BRAND BLOCK */}
+      <BrandBlock
+        color='secondary'
+        text={brandBottomHeadline}
+        image={brandBottomImage}
+        order={2}
+      />
     </main>
   );
 };
